@@ -1,5 +1,5 @@
 <div class="mt-8">
-    <a href="{{ url('/movies/'.$movie['id']) }}">
+    <a href="{{ url('/movie/'.$movie['id']) }}">
         <img src="https://image.tmdb.org/t/p/original/{{$movie['poster_path']}}" alt="parasite" class="hover:opacity-75 transition-opacity">
     </a>
     <div class="mt-2">

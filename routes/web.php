@@ -16,11 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
-
-Route::get('/movie', function () {
-    return view('show');
-});
-
+}); 
 Route::get('/', [MoviesController::class, 'index']);
-Route::get('/movies/{movie}', [MoviesController::class, 'show']);
+Route::get('/movie/{movie}', [MoviesController::class, 'show']);
+
+
+
+// Route::get('/movies', function () {
+//     return view('movies');
+// });

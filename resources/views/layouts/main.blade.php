@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <livewire:styles />
     <title>Movie App</title>
 </head>
 <body class="font-sans bg-gray-900 text-white"> 
@@ -17,7 +18,7 @@
                     </a>
                 </li>
                 <li class="md:ml-16 mt-3 md:mt-0">
-                    <a href="#" class="hover:text-gray-300">Movies</a>
+                    <a href="{{ url('/blabla') }}" class="hover:text-gray-300">Movies</a>
                 </li>
                 <li class="md:ml-6 mt-3 md:mt-0">
                     <a href="#" class="hover:text-gray-300 whitespace-nowrap">TV shows</a>
@@ -27,14 +28,7 @@
                 </li>
             </ul>
             <div class="flex items-center flex-col md:flex-row">
-                <div class="relative">
-                    <input type="text" class="bg-gray-800 text-sm rounded-full w-64 px-4 pl-8 py-1 
-                    focus:border-blue-500 " placeholder="Search">
-                    <div class="absolute top-0">
-                        <!-- Search icon SVG Here -->
-                        <!-- class="fill-current text-gray-500 w-4 mt-2 ml-2" -->
-                    </div>
-                </div>
+                 <livewire:search-dropdown></livewire:search-dropdown>
                 <div class="md:ml-4 mt-4 md:mt-0">
                     <a href="#">
                         <img src="{{ asset('img/avatar.jpg') }}" alt="" class="rounded-full w-8 h-8">
@@ -44,5 +38,6 @@
         </div>
     </nav>
     @yield('content')
+    <livewire:scripts />
 </body>
 </html>
